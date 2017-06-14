@@ -1,2 +1,2 @@
-# webpack-bootstrap-susy
-A webpack starter kit using Bootstrap, Susy, Breakpoint.
+# Sketch Web Design
+Converting a sketch training design into a responsive site using Bootstrap, Susy, Breakpoint.
