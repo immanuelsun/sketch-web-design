@@ -31,7 +31,7 @@ extractStyles: false
 # Customize Bootstrap variables that get imported before the original Bootstrap variables.
 # Thus, derived Bootstrap variables can depend on values from here.
 # See the Bootstrap _variables.scss file for examples of derived Bootstrap variables.
-preBootstrapCustomizations: ./src/sass/themes/cosmo/_variables.scss
+# preBootstrapCustomizations: ./src/sass/themes/cosmo/_variables.scss
 
 # This gets loaded after bootstrap/variables is loaded
 # Thus, you may customize Bootstrap variables
@@ -42,7 +42,7 @@ preBootstrapCustomizations: ./src/sass/themes/cosmo/_variables.scss
 # Import your custom styles here
 # Usually this endpoint-file contains list of @imports of your application styles
 
-appStyles: ./src/sass/themes/bs-theme.scss
+# appStyles: ./src/sass/themes/bs-theme.scss
 
 
 ### Bootstrap styles

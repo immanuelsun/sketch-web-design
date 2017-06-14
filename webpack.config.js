@@ -49,7 +49,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 7000,
+        port: 8080,
         hot: true,
         stats: 'errors-only',
         open: true
@@ -92,7 +92,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Project Demo',
+            title: 'Project',
             // minify: {
             //     collapseWhitespace: true
             // },
