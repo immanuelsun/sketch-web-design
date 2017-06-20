@@ -1,0 +1,9 @@
+.btn-outline-success {
+    color: $brand-success;
+    border-color: $brand-success;
+
+    &:hover {
+        background: $brand-success;
+        border-color: $gray-lightest;
+    }
+}

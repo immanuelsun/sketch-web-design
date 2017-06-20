@@ -11,24 +11,23 @@ var cssDev = ['style-loader', 'css-loader?sourceMap', 'sass-loader'];
 var cssProd = ExtractTextPlugin.extract({
     fallback: 'style-loader',
     use: [{
-            loader: 'css-loader',
-            options: {
-                sourceMap: true
-            }
-        },
-        {
-            loader: 'postcss-loader',
-            options: {
-                sourceMap: true
-            }
-        },
-        {
-            loader: 'sass-loader',
-            options: {
-                sourceMap: true
-            }
+        loader: 'css-loader',
+        options: {
+            sourceMap: true
         }
-    ],
+    }, {
+        loader: 'postcss-loader',
+        options: {
+            sourceMap: true,
+            ident: 'postcss',
+            plugins: () => [require('autoprefixer')]
+        }
+    }, {
+        loader: 'sass-loader',
+        options: {
+            sourceMap: true
+        }
+    }],
 });
 var cssConfig = isProd ? cssProd : cssDev;
 
@@ -36,10 +35,10 @@ var cssConfig = isProd ? cssProd : cssDev;
 module.exports = {
     entry: {
         index: [
-            './src/index.js',
-            './src/sass/styles.scss',
-        ]
-        // vendor: 'jquery',
+                './src/index.js',
+                './src/sass/styles.scss',
+            ]
+            // vendor: 'jquery',
     },
 
     output: {
@@ -50,21 +49,33 @@ module.exports = {
     devtool: 'source-map',
 
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.resolve(__dirname, 'dist'),
+        // publicPath: "dist",
         compress: true,
         port: 8080,
         hot: false,
         inline: true,
         stats: 'errors-only',
+        // proxy: {
+        //     "/api/**": {
+        //         target: "http://localhost:8080/",
+        //         pathRewrite: {
+        //             "^/api": ""
+        //         }
+        //     },
+        // },
         open: true
     },
 
+    // resolve: {
+    //     modules: [
+    //         path.join(__dirname, "src"),
+    //         "node_modules"
+    //     ]
+    // },
+
     module: {
         rules: [{
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader']
-            },
-            {
                 test: /\.(scss|css)$/,
                 exclude: /node_modules/,
                 use: cssConfig
@@ -85,8 +96,7 @@ module.exports = {
             {
                 test: /\.(woff2?|svg)$/,
                 loader: 'url-loader?limit=10000'
-            },
-            {
+            }, {
                 test: /\.(ttf|eot)$/,
                 loader: 'file-loader'
             },
@@ -147,7 +157,11 @@ module.exports = {
             Util: "exports-loader?Util!bootstrap/js/dist/util",
         }),
         new webpack.LoaderOptionsPlugin({
-            postcss: [autoprefixer],
-        }),
+            options: {
+                postcss: [
+                    require('autoprefixer')({ browsers: ['last 3 version'] })
+                ]
+            }
+        })
     ]
 }

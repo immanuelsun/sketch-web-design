@@ -1,0 +1,21 @@
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,400,500,600,700" !default;
+@import url($web-font-path);
+
+/*  Typography Settings
+——————————————————————————————————— */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headings-font-family;
+}
+
+body,
+p,
+li,
+ {
+    font-family: $font-family-base !important;
+}
+
