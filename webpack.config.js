@@ -29,19 +29,22 @@ var cssProd = ExtractTextPlugin.extract({
             }
         }
     ],
-    publicPath: '/dist'
 });
 var cssConfig = isProd ? cssProd : cssDev;
 
 
 module.exports = {
-    entry: [
-        './src/index.js',
-        'bootstrap-loader'
-    ],
+    entry: {
+        index: [
+            './src/index.js',
+            './src/sass/styles.scss',
+        ]
+        // vendor: 'jquery',
+    },
+
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        filename: 'js/[name].bundle.js'
     },
 
     devtool: 'source-map',
@@ -50,7 +53,8 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 8080,
-        hot: true,
+        hot: false,
+        inline: true,
         stats: 'errors-only',
         open: true
     },
@@ -119,7 +123,7 @@ module.exports = {
             filename: 'cover.html'
         }),
         new ExtractTextPlugin({
-            filename: 'styles.css',
+            filename: 'css/styles.css',
             // disable: !isProd,
             allChunks: true
         }),

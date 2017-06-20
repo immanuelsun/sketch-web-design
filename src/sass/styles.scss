@@ -1,5 +1,15 @@
+/*  bootstrap styles
+——————————————————————————————————— */
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/_mixins.scss';
+
+
 /*  modules
 ——————————————————————————————————— */
+@import 'themes/bs-theme';
+/* @import 'modules/cover';*/
+
 @import 'modules/general';
-@import 'modules/form';
-// @import 'modules/cover';
+@import 'modules/typography';
+@import 'modules/carousel';
+@import 'modules/card';
