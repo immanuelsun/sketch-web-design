@@ -115,6 +115,15 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'Sketch Design',
+            // minify: {
+            //     collapseWhitespace: true
+            // },
+            hash: true,
+            template: path.resolve(__dirname, 'src/view/sketch.html'),
+            filename: 'sketch.html'
+        }),
+        new HtmlWebpackPlugin({
             title: 'Susy & Breakpoint Demo',
             // minify: {
             //     collapseWhitespace: true
