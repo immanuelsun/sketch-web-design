@@ -35,10 +35,10 @@ var cssConfig = isProd ? cssProd : cssDev;
 module.exports = {
     entry: {
         index: [
-                './src/index.js',
-                './src/sass/styles.scss',
-            ]
-            // vendor: 'jquery',
+            './src/index.js',
+            './src/sass/styles.scss',
+        ]
+        // vendor: 'jquery',
     },
 
     output: {
@@ -100,7 +100,24 @@ module.exports = {
                 test: /\.(ttf|eot)$/,
                 loader: 'file-loader'
             },
-
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        query: {
+                            progressive: true,
+                            optimizationLevel: 7,
+                            interlaced: false,
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
+                            }
+                        }
+                    }
+                ]
+            }
         ]
     },
 
@@ -168,7 +185,9 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             options: {
                 postcss: [
-                    require('autoprefixer')({ browsers: ['last 3 version'] })
+                    require('autoprefixer')({
+                        browsers: ['last 3 version']
+                    })
                 ]
             }
         })
