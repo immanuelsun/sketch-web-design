@@ -1,21 +1,29 @@
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,400,500,600,700" !default;
 @import url($web-font-path);
 
+
 /*  Typography Settings
 ——————————————————————————————————— */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $headings-font-family;
-}
-
-body,
-p,
-li,
- {
+body {
+    -webkit-font-smoothing: antialiased;
     font-family: $font-family-base !important;
+    font-size: 16px;
+    font-weight: 300;
+    color: $gray;
 }
 
+
+h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700; }
+h2 { margin: 0 0 .5em 0; font-size: 1.6em; font-weight: 700; line-height: 1.1em; }
+h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 700; }
+h4 { margin: 0 0 1.5em 0; font-size: 1em; font-weight: 700; }
+
+p { margin: 0 0 1em 0; }
+
+a {
+    color: $link-color;
+
+    &:visited {
+        color: darken($link-color, 20%);
+    }
+}

@@ -49,33 +49,35 @@
 /* Grayscale and brand colors for use across Bootstrap.*/
 
 /* Start with assigning color names to specific hex values.*/
-$white:  #fff !default;
-$black:  #000 !default;
-$red:    #d9534f !default;
-$orange: #f0ad4e !default;
-$yellow: #ffd500 !default;
-$green:  #5cb85c !default;
-$blue:   #0275d8 !default;
-$teal:   #5bc0de !default;
-$pink:   #ff5b77 !default;
-$purple: #613d7c !default;
+$white:  #fff;
+$black:  #000;
+$red:    #cf0004;
+$orange: #f0ad4e;
+$yellow: #ffd500;
+$green:  #5cb85c;
+$blue:   #0275d8;
+$teal:   #5bc0de;
+$pink:   #ff5b77;
+$purple: #613d7c;
 $aqua: #5CC9F5;
 $black-pearl: #0E1029;
+$test: #cf0004;
 
 /* Create grayscale*/
-$gray-dark:                 #373a3c !default;
-$gray:                      #55595c !default;
-$gray-light:                #818a91 !default;
-$gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-dark:                 #373a3c;
+$gray:                      #555 ;
+$gray-light:                #818a91;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
 
 /* Reassign color vars to semantic color scheme*/
-$brand-primary:             #2780E3;
+// $brand-primary:             #2780E3;
+$brand-primary:             #007eff;
 $brand-success:             #5CC9F5;
 $brand-info:                #9954BB;
 $brand-warning:             #FF7518;
 $brand-danger:              #FF0039;
-$brand-inverse:             $gray-dark !default;
+$brand-inverse:             $gray-dark;
 
 
 /* Options*/
@@ -150,7 +152,7 @@ $inverse-color: $gray-lighter !default;
 /**/
 /* Style anchor elements.*/
 
-$link-color:            $brand-primary !default;
+$link-color:            $brand-primary ;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
@@ -203,10 +205,11 @@ $grid-gutter-widths: (
 /**/
 /* Font, line-height, and color for body text, headings, and more.*/
 
-$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+// $font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+$font-family-sans-serif: 'Open Sans', Calibri, Candara, Arial, sans-serif;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif ;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-base:       $font-family-sans-serif ;
 
 $font-size-base: 0.9375rem;
 $font-size-lg:   1.25rem !default;
