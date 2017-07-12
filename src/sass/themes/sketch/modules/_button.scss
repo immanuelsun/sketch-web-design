@@ -1,9 +1,11 @@
-.btn-outline-success {
-    color: $brand-success;
-    border-color: $brand-success;
+.btn-outline-secondary, 
+a.btn-outline-secondary {
+    border-radius: 0;
+    color: $white;
 
     &:hover {
-        background: $brand-success;
-        border-color: $gray-lightest;
+        background: $white;
+        color: $brand-primary;
     }
 }
+

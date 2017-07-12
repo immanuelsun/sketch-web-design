@@ -8,20 +8,24 @@
 
 .dropdown-menu {
     border-radius: 0;
+
     .dropdown-item {
         position: relative;
         border-radius: 0;
+        color: $link-color;
+        
         a {
             color: $link-color;
-
+            
             &:hover {
                 text-decoration: none;
                 color: $link-hover-color;
             }
         }
     }
+    
     .dropdown-sub-menu {
-        
+
         .sub-menu {
             display: none;
         }
@@ -35,11 +39,6 @@
                 background: $white;
                 padding: 0;
                 list-style: none;
-                .sub-item {
-                    a {
-                        color: $brand-primary !important;
-                    }
-                }
             }
         }
     }
