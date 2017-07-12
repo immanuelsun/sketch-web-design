@@ -5,12 +5,10 @@
 // @import '~sass-breakpoints/index';
 // @import '~susy/sass/susy';
 
-
-/* General ======================================================================*/
-@import 'modules/general';
+/* Modules */
 
 /* Typography ==================================================================*/
-@import 'modules/typography';
+@import 'modules/type';
 
 /* Navbar ======================================================================*/
 @import 'modules/navbar';
@@ -42,6 +40,11 @@
 /* Carousel ==================================================================*/
 @import 'modules/carousel';
 
+/* Partials */
+
+/* General ======================================================================*/
+@import 'partials/general';
+
 /* Header ==================================================================*/
-@import 'modules/header';
+@import 'partials/header';
 
