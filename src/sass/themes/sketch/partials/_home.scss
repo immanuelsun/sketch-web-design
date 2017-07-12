@@ -1,0 +1,28 @@
+.main {
+    .content {
+        text-align: center;
+
+        i.icon {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+        .star {
+            background: url('../img/icon_star.svg') no-repeat center center;
+        }
+
+        .marker {
+            background: url('../img/icon_marker.svg') no-repeat center center;
+        }
+
+        .gear {
+            background: url('../img/icon_gear.svg') no-repeat center center;
+        }
+    
+        h3 a {
+            color: $black;
+        }
+    }
+}
