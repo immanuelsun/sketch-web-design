@@ -1,0 +1,138 @@
+
+/* example 3 */
+
+// .page {
+//     @include container;
+// }
+
+// header {
+//     @include full;
+//     .logo {
+//         @include span(3);
+//     }
+//     .company-name {
+//         @include span(last 7);
+//     }
+//     nav {
+//         @include full;
+//     }
+//     .nav-item {
+//         @include span(3 of $nav_layout);
+//     }
+// }
+
+// .hero {
+//     @include full;
+
+//     .why-we-love {
+//         @include span(5);
+//     }
+
+//     .about-pandas {
+//         @include span(last 7);
+        
+//         .in-the-wild {
+//             @include span(3 of 7);
+//         }
+
+//         .in-the-zoo {
+//             @include span(last 4 of 7);
+//         }
+
+//         .in-the-media {
+//             @include span (7 of 7);
+
+//             img {
+//                 @include span(2 of 7);
+//             }
+
+//             .copy {
+//                 @include span(last 5 of 7);
+//             }
+//         }
+//     }
+// }
+
+// .panda-gallery {
+//     @include full;
+
+//     div {
+//         @include with-layout($gallery_layout) {
+//             @include gallery(4);
+//             margin-bottom: gutter();
+//         }
+//     }
+// }
+
+// footer {
+//   @include with-layout($golden-layout) {
+//     .panda-links {
+//       @include span(1 at 1);
+//     }
+//     .panda-social {
+//       @include span(1 at 2);
+//     }
+//       .social-link {
+//         @include span(3 of 6 .25 inside);
+//       }
+//     .panda-partners {
+//       @include span(1 at 3);
+//       img {
+//         @include span(1 at 3);
+//       }
+//     }
+//   }
+// }
+
+// footer {
+//     @include with-layout($golden-layout) {
+//         .panda-links {
+//             @include span(1 at 1);
+//         }
+//         .panda-social {
+//             @include span(1 at 2);
+
+//             .social-link {
+//                 @include span(3 of 6 .5 inside);
+//             }
+//         }
+//         .panda-partners {
+//             @include span(1 at 3);
+
+//             img {
+//                 @include span(1 of 2 0 outside);
+//             }
+//         }
+//     }
+// }
+
+/* exmaple 4 */
+// .example-4 {
+//     @include container();
+// }
+
+// .one {
+//     @include span(6);
+//     // margin-top: span(1);
+// }
+
+// .two {
+//     @include span(3);
+//     // @include gutters(3em inside);
+//     // margin-top: gutter();
+//     @include break;
+//     // @include pre(1);
+//     // @include pull(1);
+//     // @include push(1);
+//     // @include squish(3);
+//     @include prefix(1);
+// }
+
+// .three {
+//     @include span(1);
+// }
+
+// .four {
+//     @include span(1);
+//     @include last;
+// }

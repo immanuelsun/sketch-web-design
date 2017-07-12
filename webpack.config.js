@@ -11,71 +11,75 @@ var cssDev = ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'];
 var cssProd = ExtractTextPlugin.extract({
     fallback: 'style-loader',
     use: [{
-        loader: 'css-loader',
-        options: {
-            sourceMap: true
+            loader: 'css-loader',
+            options: {
+                sourceMap: true
+            }
+        },
+        {
+            loader: 'resolve-url-loader',
+            options: {
+                sourceMap: true
+            }
+        },
+        {
+            loader: 'postcss-loader',
+            options: {
+                sourceMap: true
+            }
+        },
+        {
+            loader: 'sass-loader',
+            options: {
+                sourceMap: true
+            }
         }
-    }, {
-        loader: 'postcss-loader',
-        options: {
-            sourceMap: true,
-            ident: 'postcss',
-            plugins: () => [require('autoprefixer')]
-        }
-    }, {
-        loader: 'sass-loader',
-        options: {
-            sourceMap: true
-        }
-    }],
+    ],
+    publicPath: '/dist'
 });
 var cssConfig = isProd ? cssProd : cssDev;
 
 
 module.exports = {
-    entry: {
-        index: [
-            './src/index.js',
-            './src/sass/styles.scss',
-        ]
-        // vendor: 'jquery',
-    },
-
+    // context: path.join(__dirname, 'dist'),
+    entry: [
+        'bootstrap-loader',
+        './src/index.js'
+    ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].bundle.js'
+        filename: '[name].bundle.js',
+        // publicPath: '/assets/'
     },
 
     devtool: 'source-map',
 
     devServer: {
-        contentBase: path.resolve(__dirname, 'dist'),
-        // publicPath: "dist",
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 8080,
         hot: false,
         inline: true,
         stats: 'errors-only',
-        // proxy: {
-        //     "/api/**": {
-        //         target: "http://localhost:8080/",
-        //         pathRewrite: {
-        //             "^/api": ""
-        //         }
-        //     },
-        // },
         open: true
     },
 
-    // resolve: {
-    //     modules: [
-    //         path.join(__dirname, "src"),
-    //         "node_modules"
-    //     ]
-    // },
-
     module: {
         rules: [{
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader']
+            },
+            {
                 test: /\.(scss|css)$/,
                 exclude: /node_modules/,
                 use: cssConfig
@@ -97,7 +101,7 @@ module.exports = {
                 test: /\.(woff2?|svg)$/,
                 loader: 'url-loader?limit=10000',
                 exclude: path.resolve(__dirname, 'src')
-            }, 
+            },
             {
                 test: /\.(ttf|eot)$/,
                 loader: 'file-loader',
@@ -105,23 +109,18 @@ module.exports = {
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
-                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/,
                 use: [
                     'file-loader',
                     {
                         loader: 'image-webpack-loader',
-                        options: {
-                            query: {
-                                mozjpeg: {
-                                    progressive: true,
-                                },
-                                gifsicle: {
-                                    interlaced: true,
-                                },
-                                optipng: {
-                                    optimizationLevel: 7,
-                                }
+                        query: {
+                            progressive: true,
+                            optimizationLevel: 7,
+                            interlaced: false,
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
                             }
                         }
                     }
@@ -132,7 +131,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Project',
+            title: 'Home',
             // minify: {
             //     collapseWhitespace: true
             // },
@@ -150,7 +149,7 @@ module.exports = {
             filename: 'sketch.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Susy & Breakpoint Demo',
+            title: 'Susy & Breakpoint',
             // minify: {
             //     collapseWhitespace: true
             // },
@@ -159,7 +158,7 @@ module.exports = {
             filename: 'susy.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Cover Demo',
+            title: 'Cover',
             // minify: {
             //     collapseWhitespace: true
             // },
@@ -168,7 +167,7 @@ module.exports = {
             filename: 'cover.html'
         }),
         new ExtractTextPlugin({
-            filename: 'css/styles.css',
+            filename: 'styles.css',
             // disable: !isProd,
             allChunks: true
         }),
@@ -192,13 +191,7 @@ module.exports = {
             Util: "exports-loader?Util!bootstrap/js/dist/util",
         }),
         new webpack.LoaderOptionsPlugin({
-            options: {
-                postcss: [
-                    require('autoprefixer')({
-                        browsers: ['last 3 version']
-                    })
-                ]
-            }
-        })
+            postcss: [autoprefixer],
+        }),
     ]
 }

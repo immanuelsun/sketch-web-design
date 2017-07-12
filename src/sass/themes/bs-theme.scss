@@ -1,9 +1,16 @@
-/**
- * Name: Sketch
- * Version: 0.1.0
- * Type: Bootstrap Theme
- * Copyright: New Stream Studio @ 2017
- * Author: Immanuel Sun & Elaine Cochran
- * Author URL: https://newstreamsdestudio.com
- */
-@import 'sketch/bootswatch';
+/* bootstrap 4 */
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+/* Susy */
+@import '~susy/sass/susy';
+
+/* Breakpoints */
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+/* bootswatch theme - custom*/
+@import 'sketch/_bootswatch.scss';
+
+.row {
+    @include container();
+}

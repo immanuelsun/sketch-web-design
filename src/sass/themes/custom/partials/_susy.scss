@@ -1,0 +1,176 @@
+/*  Example 1
+——————————————————————————————————— */
+
+$susy: ( columns: 12, gutters: 1/4, math: fluid, output: float, gutter-position: inside, );
+$map: (24 1/4 fluid float inside);
+$xs: 540px;
+$sm: 720px;
+$md: 960px;
+$lg: 1140px;
+body {
+    @include container(80%);
+}
+
+ul li {
+    list-style: none;
+    border-bottom: 1px solid $gray-lighter;
+    padding: 10px 0;
+}
+
+@include breakpoint($sm) {
+    main {
+        @include span(8);
+    }
+    aside {
+        @include span (4 at 9);
+    }
+};
+
+@include susy-breakpoint($lg, 24){
+   main {
+        @include span(21);
+
+        article {
+            @include span(2 of 6);
+        }
+    }
+    aside {
+        @include span (3 at 21);
+    }
+};
+
+/*  example 2
+——————————————————————————————————— */
+
+// header {
+//     height: 150px;
+//     background: #2F94B2;
+//     margin-bottom: 10px;
+//     h1 {
+//         margin: 10px;
+//     }
+// }
+// .hero {
+//     height: 100px;
+//     margin-bottom: 10px;
+//     h3,
+//     h2 {
+//         margin: 10px;
+//     }
+//     .one {
+//         background: #FF739C;
+//         height: 100%;
+//     }
+//     .two {
+//         height: 100%;
+//         div {
+//             height: 100%;
+//             background: #CCC136;
+//         }
+//     }
+// }
+// .content {
+//     h3 {
+//         margin: 10px;
+//     }
+//     div {
+//         height: 100px;
+//         margin-top: 10px;
+//         margin-bottom: 10px;
+//     }
+//     div:nth-child(3n) {
+//         background: #2F94B2;
+//     }
+//     div:nth-child(3n+1) {
+//         background: #FF7311;
+//     }
+//     div:nth-child(3n+2) {
+//         background: #5DD9FF;
+//     }
+// }
+////  GRID
+// .page {
+//     @include container;
+//     h1, h2, h3, h4, h5, h6 {
+//         font-family: helvetica;
+//         font-size: .9em;
+//     }
+// }
+// header {
+//     @include full;
+// }
+// .hero {
+//     clear: both;
+//     .one {
+//         @include span(first 4);
+//     }
+//     .two {
+//         @include span(last 8 nest);
+//         div:nth-child(4n+1) {
+//             clear: both;
+//             @include span(2 at 1 of 8);
+//         }
+//         div:nth-child(4n+2) {
+//             @include span(2 at 3 of 8);
+//         }
+//         div:nth-child(4n+3) {
+//             @include span(2 at 5 of 8);
+//         }
+//         div:nth-child(4n) {
+//             @include span(last 2 of 8);
+//         }
+//         div:nth-child(4) {
+//             @include span(last 2 of 8);
+//         }
+//     }
+// }
+// .content {
+//     div {
+//         @include gallery(4);
+//     }
+// }
+
+/*  example 3
+——————————————————————————————————— */
+
+// ul li {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+// }
+// nav {
+//   margin: 10px 0;
+//   text-align: center;
+//   li {
+//     background: #eee;
+//   }
+//   a {
+//     display: block;
+//     &:hover {
+//       background: #ddd;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+/* example 3 */
+
+// .example-4 {
+//     height: 500px;
+// }
+// .one {
+//     height: 200px;
+//     background: $blue;
+// }
+// .two {
+//     height: 200px;
+//     background: $green;
+// }
+// .three {
+//     height: 200px;
+//     background: $red;
+// }
+// .four {
+//     height: 200px;
+//     background: $yellow;
+// }

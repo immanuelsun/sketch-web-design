@@ -1,9 +1,7 @@
 /*  Bootsrtap
 ——————————————————————————————————— */
-import bootstrap from 'bootstrap-loader';
-import bsConfig from './js/bsConfig';
+import custom from './js/bs-config';
 
 /* Styles
 --------------------------------------------*/
-// import styles from './sass/styles.scss';
-
+import styles from './sass/styles.scss';
