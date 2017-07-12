@@ -95,24 +95,33 @@ module.exports = {
 
             {
                 test: /\.(woff2?|svg)$/,
-                loader: 'url-loader?limit=10000'
-            }, {
+                loader: 'url-loader?limit=10000',
+                exclude: path.resolve(__dirname, 'src')
+            }, 
+            {
                 test: /\.(ttf|eot)$/,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                exclude: path.resolve(__dirname, 'src')
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
+                include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/,
                 use: [
                     'file-loader',
                     {
                         loader: 'image-webpack-loader',
-                        query: {
-                            progressive: true,
-                            optimizationLevel: 7,
-                            interlaced: false,
-                            pngquant: {
-                                quality: '65-90',
-                                speed: 4
+                        options: {
+                            query: {
+                                mozjpeg: {
+                                    progressive: true,
+                                },
+                                gifsicle: {
+                                    interlaced: true,
+                                },
+                                optipng: {
+                                    optimizationLevel: 7,
+                                }
                             }
                         }
                     }

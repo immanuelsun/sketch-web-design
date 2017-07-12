@@ -12,16 +12,72 @@
 
 <body>
     <div class="page">
-        <header class="container">
-            <div class="row">
-                <a href="http://newstreamdestudio.com" class="logo" title="Everyday Things">Everyday Things</a>
-                <div class="hero">
-                    <h1>Add interest with natural textures</h1>
-                    <a href="#" class="btn btn-primary" title="Get advice from top designers">Get advice from top designers</a>
+        <header>
+            <nav class="navbar navbar-toggleable-md navbar-light ">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <a href="http://newstreamdestudio.com" title="Everyday Things" class="navbar-brand"><img class="logo" src=<%=require( '../img/logo.svg') %> alt="Everyday Things" ></a>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                title="About Us">
+                            About Us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Item 1</a>
+                                <a class="dropdown-item" href="#">Item 2</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                title="Design Corner">
+                            Design Corner
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Item 1</a>
+                                <a class="dropdown-item" href="#">Item 2   
+                                <ul class="sub-menu">
+                                    <li><a href="#" title="Sub Item 1">Sub Item 1</a></li>
+                        <li><a href="#" title="Sub Item 2">Sub Item 2</a></li>
+                    </ul>
+                    </a>
+                    </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            title="Products">
+                            Products
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Item 1</a>
+                            <a class="dropdown-item" href="#">Item 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-                <!-- /.hero -->
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="hero col-sm-4 offset-sm-8 align-self-center">
+                        <h1>Add interest with natural textures</h1>
+                        <a href="#" class="btn btn-primary" title="Get advice from top designers">Get advice from top designers</a>
+                    </div>
+                    <!-- /.hero -->
+                </div>
+                <!-- row -->
             </div>
-            <!-- row -->
+            <!-- /.container -->
         </header>
         <div class="container">
             <div class="row">
@@ -110,48 +166,6 @@
                     </blockquote>
                 </section>
                 <!-- /.how-to -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-        <div class="container">
-            <div class="row">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#" title="About Us">About Us</a>
-                            <ul>
-                                <li><a href="#" title="Sub Item 1">Sub Item 1</a></li>
-                                <li><a href="#" title="Sub Item 2">Sub Item 2</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="Design Corner">Design Corner</a>
-                            <ul>
-                                <li><a href="#" title="Sub Item 1">Sub Item 1</a></li>
-                                <li><a href="#" title="Sub Item 2">Sub Item 2</a></li>
-                                <li>
-                                    <a href="#" title="Sub Item 3">Sub Item 3</a>
-                                    <ul>
-                                        <li><a href="#" title="Sub Sub Item 1">Sub Sub Item 1</a></li>
-                                        <li><a href="#" title="Sub Sub Item 2">Sub Sub Item 2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="Products">Products</a>
-                            <ul>
-                                <li><a href="#" title="Sub Item 1">Sub Item 1</a></li>
-                                <li><a href="#" title="Sub Item 2">Sub Item 2</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="Contact Us">Contact Us</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- nav -->
             </div>
             <!-- /.row -->
         </div>
