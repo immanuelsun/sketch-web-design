@@ -43,7 +43,7 @@
     "breakpoint-sass": "^2.7.1",
     "css-loader": "^0.28.4",
     "exports-loader": "^0.6.4",
-    "extract-text-webpack-plugin": "^2.1.2",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "font-awesome": "^4.7.0",
     "font-awesome-loader": "^1.0.2",
@@ -60,7 +60,7 @@
     "susy": "^2.2.12",
     "tether": "^1.4.0",
     "url-loader": "^0.5.9",
-    "webpack": "^3.0.0",
+    "webpack": "^3.2.0",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
