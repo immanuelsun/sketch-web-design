@@ -13,7 +13,7 @@
 <body>
     <div class="page">
         <header>
-            <nav class="navbar navbar-toggleable-md">
+            <nav class="navbar navbar-toggleable-md container">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -114,18 +114,27 @@
                 </aside>
             </section>
             <!-- /.main -->
+        </div>
+        <!-- /.container -->
             
             
-            <section class="atmosphere row">
-                <article class="col-md-12">
+        <div class="container">
+            <section class="atmosphere row justify-content-center">
+                <div class="col-md-6">
+                    <img src=<%= require('../img/photo_lounge.jpg') %> alt="Lounge">
+                </div> <!-- col-md-6 -->
+                <article class="col-md-6">
                     <h2>Creating a modern atmosphere</h2>
                     <p>Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Lorem
                         ipsum dolor sit amet etuer adipiscing elit. Pulvinar odio lorem non turpis. Nullam sit amet enim lorem.</p>
-                    <a href="#" class="btn btn-outline-success btn-sm" title="Creating a modern atmosphere">Learn more</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm" title="Creating a modern atmosphere">Learn more</a>
                 </article>
             </section>
             <!-- /.atmosphere -->
+        </div>
+        <!-- /.container -->
             
+        <div class="container">
             <section class="how-to row">
                 <aside class="col-sm-3">
                     <div class="content">
@@ -149,26 +158,26 @@
                     </div>
                     <!-- /.content -->
                 </aside>
-                <blockquote class="col-sm-6">
-                    <!-- Blockquotee -->
-                    <p class="quote">Lorem ipsum dolor sit amet conse ctetuer adipiscing elit. Morbi comod sed dolor sit amet consect adipiscin
-                        elit.
-                    </p>
-                    <p class="credit"><strong>Author Name</strong> <br> <em>Business Title</em> <br> Company</p>
-                </blockquote>
+                <div class="col-md-6">
+                    <blockquote>
+                        <!-- Blockquotee -->
+                        <p class="quote">Lorem ipsum dolor sit amet conse ctetuer adipiscing elit. Morbi comod sed dolor sit amet consect adipiscin
+                            elit.
+                        </p>
+                        <p class="credit"><strong>Author Name</strong> <br> <em>Business Title</em> <br> Company</p>
+                    </blockquote>
+                </div>
             </section>
-            <!-- /.how-to --></div>
+            <!-- /.how-to -->
+        </div>
         <!-- /.container -->
 
         <footer class="container">
-            <div class="row">&copy; Everyday Things
-                <div class="content">
-                    <a href="#" title="Privacy Policy">Privacy Policy</a>
-                    <a href="#" title="Terms of Service">Terms of Service</a>
-                </div>
-                <!-- content -->
-            </div>
-            <!-- /.row -->
+            <ul>    
+                <li>&copy; Everyday Things</li>
+                <li> <a href="#" title="Privacy Policy">Privacy Policy</a></li>
+                <li><a href="#" title="Terms of Service">Terms of Service</a></li>        
+            </ul>    
         </footer>
     </div>
     <!-- /#page -->
