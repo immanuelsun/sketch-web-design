@@ -1,7 +1,15 @@
 .navbar-nav {
     li {
+
         a.nav-link {
             color: $white;
+        }
+    }
+
+    li.nav-item {
+        margin-right: 1em;
+        &:hover {
+            border: 1px solid $white;
         }
     }
 }
@@ -37,8 +45,12 @@
                 left: 100%;
                 top: 0;
                 background: $white;
-                padding: 0;
+                padding: 5px;
                 list-style: none;
+
+                a {
+                    color: $link-color;
+                }
             }
         }
     }
