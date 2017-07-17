@@ -45,7 +45,8 @@ $susy: (
   box-sizing: border-box;
  }
 
- img {
-  width: 100%;
-  height: auto;
- }
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200;

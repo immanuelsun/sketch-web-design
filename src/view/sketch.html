@@ -13,14 +13,14 @@
 <body>
     <div class="page">
         <header>
-            <nav class="navbar navbar-toggleable-md container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-toggleable-md">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 <a href="http://newstreamdestudio.com" title="Everyday Things" class="navbar-brand"><img class="logo" src=<%=require( '../img/logo.svg') %> alt="Everyday Things" ></a>
 
-                <div class="collapse navbar-collapse" id="mainNav">
+                <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="navbar-nav mr-auto mt-2 mt-md-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -63,8 +63,11 @@
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                        <label class="sr-only" for="inlineFormInputGroup">Search</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search...">
+                        </div>
                     </form>
                 </div>
             </nav>

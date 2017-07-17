@@ -29,4 +29,9 @@
 .form-control {
     border-radius: 0;
     border: 1px solid $white;
+
+    .navbar form & {
+        width: 80%;
+    }
 }
+

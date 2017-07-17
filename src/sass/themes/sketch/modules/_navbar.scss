@@ -1,17 +1,24 @@
 .navbar-nav {
     li {
-
         a.nav-link {
             color: $white;
         }
     }
 
     li.nav-item {
-        margin-right: 1em;
         &:hover {
             border: 1px solid $white;
         }
+
+        @include media-breakpoint-up(xl) {
+            margin-right: 1.5em;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 1em;
+        }
     }
+
 }
 
 .dropdown-menu {
