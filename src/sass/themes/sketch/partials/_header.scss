@@ -1,8 +1,25 @@
 header {
-    height: 430px;
-    background: $red url(../img/banner_1200.jpg) no-repeat center bottom;
-    background-size: cover;
     position: relative;
+
+    @include media-breakpoint-up(sm) {
+        background: $red url(../img/banner_425.jpg) no-repeat center center;
+        background-size: 100% auto;
+    }
+
+    @include media-breakpoint-up(md) {
+        background: $red url(../img/banner_625.jpg) no-repeat center center;
+        background-size: 100% auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        background: $red url(../img/banner_825.jpg) no-repeat center center;
+        background-size: 100% auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+        background: $red url(../img/banner_1200.jpg) no-repeat center center;
+        background-size: 100% auto;
+    }
 }
 
 img.logo {
@@ -11,6 +28,7 @@ img.logo {
 }
 
 .hero {
+    margin-top: 2em;
     text-align: right;
     h1 {
         color: $white;

@@ -40,8 +40,13 @@
     padding-bottom: 0;
     
     .content {
+        padding-bottom: 1em;
         img {
-            width: 80%;
+            max-width: 90%;
+            margin-bottom: 1em;
+        }
+
+        h4 {
             margin-bottom: 1em;
         }
     }

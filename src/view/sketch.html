@@ -13,64 +13,72 @@
 <body>
     <div class="page">
         <header>
-            <nav class="navbar navbar-toggleable-md">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                <a href="http://newstreamdestudio.com" title="Everyday Things" class="navbar-brand"><img class="logo" src=<%=require( '../img/logo.svg') %> alt="Everyday Things" ></a>
-
-                <div class="collapse navbar-collapse" id="main-nav">
-                    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                title="About Us">
-                            About Us
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Item 1</a>
-                                <a class="dropdown-item" href="#">Item 2</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                title="Design Corner">
-                            Design Corner
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li class="dropdown-item"><a href="#">Item 1</a></li>
-                                <li class="dropdown-item dropdown-sub-menu">
-                                    <a href="#">Item 2  </a>
-                                    <ul class="sub-menu">
-                                        <li class="dropdown-item"><a href="#" title="Sub Item 1">Sub Item 1</a></li>
-                                        <li class="dropdown-item"><a href="#" title="Sub Item 2">Sub Item 2</a></li>
+            <div class="nav-section"><div class="container">
+                    <nav class="navbar navbar-toggleable-sm">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-nav"
+                            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="fa fa-bars"></span>
+                            </button>
+                        <div class="logo">
+                            <a href="http://newstreamdestudio.com" title="Everyday Things" class="navbar-brand"><img class="logo" src=<%=require( '../img/logo.svg') %> alt="Everyday Things" ></a>
+                        </div>
+                        <!-- /.logo -->
+                    
+                        <div class="collapse navbar-collapse" id="main-nav">
+                            <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        title="About Us">
+                                    About Us
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Item 1</a>
+                                        <a class="dropdown-item" href="#">Item 2</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        title="Design Corner">
+                                    Design Corner
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li class="dropdown-item"><a href="#">Item 1</a></li>
+                                        <li class="dropdown-item dropdown-sub-menu">
+                                            <a href="#">Item 2  </a>
+                                            <ul class="sub-menu">
+                                                <li class="dropdown-item"><a href="#" title="Sub Item 1">Sub Item 1</a></li>
+                                                <li class="dropdown-item"><a href="#" title="Sub Item 2">Sub Item 2</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        title="Products">
+                                    Products
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Item 1</a>
+                                        <a class="dropdown-item" href="#">Item 2</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
                             </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                title="Products">
-                            Products
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Item 1</a>
-                                <a class="dropdown-item" href="#">Item 2</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <label class="sr-only" for="inlineFormInputGroup">Search</label>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search...">
+                            <form class="form-inline my-2 my-lg-0">                   
+                                <label class="sr-only" for="inlineFormInputGroup">Search</label>
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search...">
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </nav>
                 </div>
-            </nav>
+                <!-- /.container -->
+            </div>
+            <!-- /.nav-section -->
             <div class="container">
                 <div class="row">
                     <div class="hero col-sm-6 offset-sm-6 ">
