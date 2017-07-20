@@ -1,24 +1,30 @@
 header {
     position: relative;
+    padding-bottom: 2em;
+    
+    @include media-breakpoint-down(sm) {
+        background: $red url(../img/banner_425.jpg) no-repeat center center;
+        background-size: 100% 100%;
+    }
 
     @include media-breakpoint-up(sm) {
         background: $red url(../img/banner_425.jpg) no-repeat center center;
-        background-size: 100% auto;
+        background-size: 100% 100%;
     }
 
     @include media-breakpoint-up(md) {
         background: $red url(../img/banner_625.jpg) no-repeat center center;
-        background-size: 100% auto;
+        background-size: 100% 100%;
     }
 
     @include media-breakpoint-up(lg) {
         background: $red url(../img/banner_825.jpg) no-repeat center center;
-        background-size: 100% auto;
+        background-size: 100% 100%;
     }
 
     @include media-breakpoint-up(xl) {
         background: $red url(../img/banner_1200.jpg) no-repeat center center;
-        background-size: 100% auto;
+        background-size: 100% 100%;
     }
 }
 
@@ -28,9 +34,24 @@ img.logo {
 }
 
 .hero {
-    margin-top: 2em;
+    margin-top: 1em;
     text-align: right;
     h1 {
         color: $white;
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: .8em;
+        text-align: center;
+
+
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: .5em;
+        }
+
+        .btn {
+            font-size: 85%;
+        }
     }
 }

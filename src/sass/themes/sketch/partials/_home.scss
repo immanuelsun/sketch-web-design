@@ -31,6 +31,10 @@
 .atmosphere {
     background: $brand-primary;
     color: $white;
+
+    h2 {
+        margin: .5em 0;
+    }
 }
 
 .how-to {
@@ -41,22 +45,21 @@
     
     .content {
         padding-bottom: 1em;
-        img {
-            max-width: 90%;
-            margin-bottom: 1em;
-        }
 
         h4 {
-            margin-bottom: 1em;
+            margin: 1em 0;
         }
     }
 
     blockquote {
         background: $white;
-        @include container(80%);
         padding: 2em;
         position: absolute;
         bottom: -3em;
+
+        @include media-breakpoint-down(lg) {
+            position: inherit;
+        }
 
         &::before {
             content: '"';

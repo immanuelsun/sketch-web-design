@@ -1,9 +1,14 @@
 footer {
     margin: 1em 0;
-    padding: 0;
+    padding: 0 0 .5em 0;
     ul li {
         list-style: none;
         display: inline-block;
         margin-right: 2em;
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+            margin: .5em 0;
+        }
     }
 }

@@ -35,7 +35,6 @@ var cssProd = ExtractTextPlugin.extract({
             }
         }
     ],
-    publicPath: '/dist'
 });
 var cssConfig = isProd ? cssProd : cssDev;
 
@@ -49,13 +48,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
-        // publicPath: '/assets/'
+        // publicPath: './'
     },
 
     devtool: 'source-map',
 
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, '/src/'),
         compress: true,
         port: 8080,
         hot: false,
